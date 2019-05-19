@@ -1,14 +1,16 @@
 package com.java.collection.map;
 
-public class Employee implements Comparable<Employee>{
+public class Employee implements Comparable<Employee> {
 	private int id;
 	private String name;
 	private long salary;
+
 	public Employee(int id, String name, long salary) {
 		this.id = id;
 		this.name = name;
 		this.salary = salary;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -18,7 +20,8 @@ public class Employee implements Comparable<Employee>{
 		result = prime * result + (int) (salary ^ (salary >>> 32));
 		return result;
 	}
-	/*@Override
+
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -37,15 +40,17 @@ public class Employee implements Comparable<Employee>{
 		if (salary != other.salary)
 			return false;
 		return true;
-	}*/
+	}
+
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary
 				+ "]";
 	}
+
 	@Override
 	public int compareTo(Employee o) {
 		return this.name.compareTo(o.name);
 	}
-	
+
 }
