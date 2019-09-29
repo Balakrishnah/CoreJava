@@ -16,9 +16,9 @@ public class PalindromeNumber {
 		int r, sum = 0, temp;
 		temp = n;
 		while (n > 0) {
-			r = n % 10;			
-			sum = (sum * 10) + r;			
-			n = n / 10;			
+			r = n % 10;
+			sum = (sum * 10) + r;
+			n = n / 10;
 		}
 		if (temp == sum) {
 			System.out.println("The number is Palindrome Number");
@@ -30,7 +30,7 @@ public class PalindromeNumber {
 	public static void isPalindromeAnotherWay(String orginal) {
 		int length = orginal.length();
 		String reverse = "";
-		for (int i = length-1; i>=0; i--) {
+		for (int i = length - 1; i >= 0; i--) {
 			reverse = reverse + orginal.charAt(i);
 		}
 		if (orginal.equals(reverse)) {

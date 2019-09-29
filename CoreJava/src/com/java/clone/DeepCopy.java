@@ -30,5 +30,4 @@ public class DeepCopy {
 
 		System.out.println("Original After clone modified: " + person.getName()	+ "--" + person.getCar().getName());
 	}
-
 }

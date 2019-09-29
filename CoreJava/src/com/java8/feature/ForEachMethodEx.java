@@ -74,6 +74,6 @@ public class ForEachMethodEx {
 		System.out.println("Iterate the stream using forEachOrdered");
 		nameList.stream().forEachOrdered(System.out::println);
 		System.out.println("Iterate the stream and filter using forEach");
-		nameList.stream().filter(m -> m.startsWith("R")).forEach(System.out::println);
+		nameList.stream().filter(m -> m.startsWith("M")).forEach(System.out::println);
 	}
 }

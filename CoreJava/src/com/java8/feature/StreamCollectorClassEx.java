@@ -2,6 +2,8 @@ package com.java8.feature;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -12,6 +14,7 @@ public class StreamCollectorClassEx {
 	public static void main(String[] args) {
 		groupingByAndCoutingEx();
 		fetchingDataAsList();
+		getDataAsMap();
 	}
 	public static void groupingByAndCoutingEx(){
 		List<String> nameList = Arrays.asList("Jon","Ajeet","Steve","Ajeet","Jon","Ajeet");
@@ -30,7 +33,16 @@ public class StreamCollectorClassEx {
 		System.out.println("Average age of Student is: "+avgAge);
 	}
 	
-	public static void getDataAsSet(){
+	public static void getDataAsMap(){
+		List<Student> studentList = new ArrayList<Student>();
+		studentList.add(new Student(10, "babu", 29));
+		studentList.add(new Student(15, "Pramod", 25));
+		studentList.add(new Student(13, "Mahesh", 27));
+		Map<Integer, String> studentMap = studentList.stream().collect(Collectors.toMap(Student::getId,Student::getName));
+		System.out.println(studentMap);
 		
+		Comparator<Student> com = Comparator.comparing(Student::getName);		
+		Collections.sort(studentList,com);
+		System.out.println("Sort by the student age:"+studentList);
 	}
 }

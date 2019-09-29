@@ -32,6 +32,11 @@ public class Person implements Comparable<Person> {
 
 	@Override
 	public int compareTo(Person o) {
+		return this.name.compareTo(o.name);
+	}
+
+	/*@Override
+	public int compareTo(Person o) {
 		if(this.id == o.id){
 			return 0;
 		}else if (this.id<o.id) {
@@ -39,5 +44,6 @@ public class Person implements Comparable<Person> {
 		}else{
 			return 1;
 		}
-	}	
+	}	*/
+	
 }
